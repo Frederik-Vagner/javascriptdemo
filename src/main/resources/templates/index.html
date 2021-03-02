@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<div class="contrainer">
+    <h1>This is your first JS exercise</h1>
+    <input id="input" type="text" value=""/> <br><br>
+    <button id="button" type="button" onclick="myFunction()">Click me</button>
+</div>
+
+
+
+<script>
+    function myFunction(){
+        let text = document.getElementById("button").innerHTML;
+        if (text === "Click me"){
+            document.getElementById("input").value = "Change me";
+            document.getElementById("button").innerHTML = "Change text above and click again!";
+            return;
+        }
+        if (document.getElementById("button").innerHTML==="Change text above and click again!"){
+            document.getElementById("input").value = "Claus the great!";
+            document.getElementById("button").innerHTML = "Click me again!";
+            return;
+        }
+        if (text === "Click me again!"){
+            document.getElementById("input").value = "Change me";
+            document.getElementById("button").innerHTML = "Change text above and click again!";
+        }
+
+
+    }
+
+</script>
+
+</body>
+</html>

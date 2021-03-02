@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<h1>BMI CALCULATOR</h1>
+<p>Weight (kg)</p>
+<input id="weight" type="number" placeholder="Please enter weight" /> <br><br>
+<p>Height (cm)</p>
+<input id="height" type="number"placeholder="Please enter height"/> <br><br>
+<button id="button" type="button" onclick="myFunction()">Calculate BMI</button>
+<p id="demo"></p>
+
+
+
+<script>
+    function myFunction(){
+        var weight = document.getElementById("weight").value;
+        var height = document.getElementById("height").value/100;
+        var bmi = weight/(height*height);
+        var n = bmi.toFixed(2)
+        var vægtKlasse;
+        if (bmi<18.5){
+            vægtKlasse = "undervægtig";
+        }else if (bmi>=18.5 && bmi<25){
+            vægtKlasse = "normalvægtig";
+        }else if (bmi>=25 && bmi<30){
+            vægtKlasse = "let overvægtig"
+        }else if (bmi>=30 && bmi<35){
+            vægtKlasse = "overvægtig klasse 1"
+        }else if (bmi>=35 && bmi<40){
+            vægtKlasse = "overvægtig klasse 2"
+        }else if (bmi>40){
+            vægtKlasse = "overvægtig klasse 3"
+        }
+
+        document.getElementById("demo").innerHTML = n + " - " + vægtKlasse;
+    }
+</script>
+</body>
+</html>

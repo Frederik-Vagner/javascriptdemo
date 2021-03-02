@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        .box{
+            margin: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Javascript Calculator</h1>
+<div class="box">
+<input id="input" disabled type="text" value=""/> <br>
+<button id="/" type="button" onclick="add(id)">/</button>
+<button id="*" type="button" onclick="add(id)">*</button>
+<button id="del" type="button" onclick="add(id)">DEL</button> <br>
+<button id="7" type="button" onclick="add(id)">7</button>
+<button id="8" type="button" onclick="add(id)">8</button>
+<button id="9" type="button" onclick="add(id)">9</button>
+<button id="-" type="button" onclick="add(id)">-</button> <br>
+<button id="4" type="button" onclick="add(id)">4</button>
+<button id="5" type="button" onclick="add(id)">5</button>
+<button id="6" type="button" onclick="add(id)">6</button>
+<button id="+" type="button" onclick="add(id)">+</button> <br>
+<button id="1" type="button" onclick="add(id)">1</button>
+<button id="2" type="button" onclick="add(id)">2</button>
+<button id="3" type="button" onclick="add(id)">3</button>
+<button id="=" type="button" onclick="calculate()">=</button> <br>
+<button id="0" type="button" onclick="add(id)">0</button>
+<button id="." type="button" onclick="add(id)">.</button>
+</div>
+
+<script>
+    var calculation = "";
+    var result = 0;
+    function add(parameter){
+        calculation += parameter;
+        document.getElementById("input").value = calculation;
+    }
+    function calculate(){
+        document.getElementById("=").innerHTML = eval()
+
+    }
+
+</script>
+
+</body>
+</html>
